@@ -1,0 +1,52 @@
+<idea-plugin>
+    <id>com.funivan.php.extremePhpInspections</id>
+    <name>Extreme inspections for php</name>
+    <version>1.0</version>
+    <vendor email="alotofall@gmail.com" url="http://funivan.com">Funivan</vendor>
+
+    <description><![CDATA[
+      Make your code more strict and flexible
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <depends>com.jetbrains.php</depends>
+    <depends>com.intellij.modules.platform</depends>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <localInspection
+            groupPath="PHP,ExtremePhpInspection"
+            groupName="Static"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidStaticMethodsInspection"
+            enabledByDefault="true"
+            displayName="Avoid Static methods"
+            shortName="AvoidStaticMethodsInspection"
+        />
+        <localInspection
+            groupPath="PHP,ExtremePhpInspection"
+            groupName="Static"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidStaticPropertiesInspection"
+            enabledByDefault="true"
+            displayName="Avoid static properties"
+            shortName="AvoidStaticPropertiesInspection"
+        />
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
