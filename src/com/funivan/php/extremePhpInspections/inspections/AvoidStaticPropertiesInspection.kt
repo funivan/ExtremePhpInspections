@@ -1,9 +1,9 @@
 package com.funivan.php.extremePhpInspections.inspections
 
+import com.funivan.php.extremePhpInspections.constrains.Constrain
+import com.funivan.php.extremePhpInspections.visitors.FieldVisitor
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.PsiElementVisitor
-import com.jetbrains.php.lang.psi.elements.Field
-import com.jetbrains.php.lang.psi.visitors.PhpElementVisitor
 
 class AvoidStaticPropertiesInspection : BaseInspection() {
 
@@ -12,14 +12,10 @@ class AvoidStaticPropertiesInspection : BaseInspection() {
     }
 
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
-        return object : PhpElementVisitor() {
-            override fun visitPhpField(field: Field) {
-                super.visitPhpField(field)
-                val nameNode = field.nameNode
-                if (nameNode != null && field.modifier.isStatic) {
-                    holder.registerProblem(nameNode.psi, "$emoji Do not write static properties")
-                }
-            }
-        }
+        return FieldVisitor(
+                Constrain({ it.modifier.isStatic }),
+                "Do not write static properties",
+                holder
+        )
     }
 }
