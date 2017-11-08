@@ -43,6 +43,14 @@
             displayName="Avoid static properties"
             shortName="AvoidStaticPropertiesInspection"
         />
+        <localInspection
+            groupPath="PHP,ExtremePhpInspection"
+            groupName="Visibility"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidProtectedMethodsInspection"
+            enabledByDefault="true"
+            displayName="Avoid protected methods"
+            shortName="AvoidProtectedMethodsInspection"
+        />
     </extensions>
 
     <actions>
