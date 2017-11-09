@@ -1,7 +1,7 @@
 # Extreme Php Inspection
-- [x] no static properties
-- [x] no static methods (Only named )
-- [x] no protected methods
+- [x] No static properties
+- [x] No static methods (Only named constructors)
+- [x] No protected methods
 - [x] No magic method `__toString`
 - [ ] No `public` or `protected` properties. Only `public`
 - [ ] All public methods should be declared in the interface
