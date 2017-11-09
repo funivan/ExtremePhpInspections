@@ -51,6 +51,14 @@
             displayName="Avoid protected methods"
             shortName="AvoidProtectedMethodsInspection"
         />
+        <localInspection
+            groupPath="PHP,ExtremePhpInspection"
+            groupName="Magic"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidMagicMethodsInspection"
+            enabledByDefault="true"
+            displayName="Avoid magic methods"
+            shortName="AvoidMagicMethodsInspection"
+        />
     </extensions>
 
     <actions>
