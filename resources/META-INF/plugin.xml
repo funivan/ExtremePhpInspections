@@ -53,6 +53,14 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
+            groupName="Visibility"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidPublicOrProtectedPropertiesInspection"
+            enabledByDefault="true"
+            displayName="Avoid protected or public properties"
+            shortName="AvoidPublicOrProtectedPropertiesInspection"
+        />
+        <localInspection
+            groupPath="PHP,ExtremePhpInspection"
             groupName="Magic"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidMagicMethodsInspection"
             enabledByDefault="true"
