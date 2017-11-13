@@ -13,7 +13,7 @@ class FieldVisitor(
     override fun visitPhpField(field: Field) {
         super.visitPhpField(field)
         val nameNode = field.nameNode
-        if (nameNode != null && constraint.valid(field)) {
+        if (nameNode != null && constraint.match(field)) {
             holder.registerProblem(nameNode.psi, message)
         }
     }

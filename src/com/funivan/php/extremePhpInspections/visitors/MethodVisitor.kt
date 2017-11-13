@@ -13,7 +13,7 @@ class MethodVisitor(
     override fun visitPhpMethod(method: Method) {
         super.visitPhpMethod(method)
         val nameNode = method.nameNode
-        if (nameNode != null && constraint.valid(method)) {
+        if (nameNode != null && constraint.match(method)) {
             holder.registerProblem(nameNode.psi, message)
         }
     }

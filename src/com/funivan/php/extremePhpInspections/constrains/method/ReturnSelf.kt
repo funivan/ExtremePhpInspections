@@ -6,7 +6,7 @@ import com.jetbrains.php.lang.psi.elements.Method
 import com.jetbrains.php.lang.psi.elements.PhpClass
 
 class ReturnSelf : ConstrainInterface<Method> {
-    override fun valid(target: Method): Boolean {
+    override fun match(target: Method): Boolean {
         var returnSelf = false
         val returnType = target.returnType
         if (returnType is ClassReference) {

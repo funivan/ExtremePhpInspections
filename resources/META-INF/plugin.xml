@@ -37,6 +37,14 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
+            groupName="General"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.DeclareMethodsInTheInterfaceInspection"
+            enabledByDefault="true"
+            displayName="Public methods should be declared in the interface"
+            shortName="DeclareMethodInTheInterfaceInspection"
+        />
+        <localInspection
+            groupPath="PHP,ExtremePhpInspection"
             groupName="Static"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidStaticPropertiesInspection"
             enabledByDefault="true"
