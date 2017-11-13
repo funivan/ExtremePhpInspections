@@ -69,6 +69,14 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
+            groupName="Visibility"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.PublicMethodsShouldBeFinalInspection"
+            enabledByDefault="true"
+            displayName="Public methods should be final"
+            shortName="PublicMethodsShouldBeFinalInspection"
+        />
+        <localInspection
+            groupPath="PHP,ExtremePhpInspection"
             groupName="Magic"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidMagicMethodsInspection"
             enabledByDefault="true"
