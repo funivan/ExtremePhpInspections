@@ -4,8 +4,10 @@ import com.funivan.php.extremePhpInspections.constrains.Constrain
 import com.funivan.php.extremePhpInspections.visitors.FieldVisitor
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.PsiElementVisitor
+import com.jetbrains.php.lang.inspections.PhpInspection
 
-class AvoidStaticPropertiesInspection : BaseInspection() {
+
+class AvoidStaticPropertiesInspection : PhpInspection() {
 
     override fun getShortName(): String {
         return "AvoidStaticPropertiesInspection"

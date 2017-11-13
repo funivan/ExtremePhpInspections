@@ -2,11 +2,11 @@ package com.funivan.php.extremePhpInspections.inspections
 
 import com.funivan.php.extremePhpInspections.constrains.Constrain
 import com.funivan.php.extremePhpInspections.visitors.FieldVisitor
-import com.funivan.php.extremePhpInspections.visitors.MethodVisitor
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.PsiElementVisitor
+import com.jetbrains.php.lang.inspections.PhpInspection
 
-class AvoidPublicOrProtectedPropertiesInspection : BaseInspection() {
+class AvoidPublicOrProtectedPropertiesInspection : PhpInspection() {
 
     override fun getShortName(): String {
         return "AvoidPublicOrProtectedPropertiesInspection"

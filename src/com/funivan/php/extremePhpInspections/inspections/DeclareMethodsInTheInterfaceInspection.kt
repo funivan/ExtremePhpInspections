@@ -8,10 +8,11 @@ import com.funivan.php.extremePhpInspections.constrains.method.aliases.Public
 import com.funivan.php.extremePhpInspections.visitors.MethodVisitor
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.PsiElementVisitor
+import com.jetbrains.php.lang.inspections.PhpInspection
 import com.jetbrains.php.lang.psi.elements.Method
 
 
-class DeclareMethodsInTheInterfaceInspection : BaseInspection() {
+class DeclareMethodsInTheInterfaceInspection : PhpInspection() {
     private val notDeclaredInInterfaceConstrain = object : ConstrainInterface<Method> {
         override fun match(target: Method): Boolean {
             var match = false
