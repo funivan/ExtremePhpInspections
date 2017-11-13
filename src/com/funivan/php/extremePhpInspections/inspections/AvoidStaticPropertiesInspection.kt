@@ -15,7 +15,7 @@ class AvoidStaticPropertiesInspection : PhpInspection() {
 
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return FieldVisitor(
-                Constrain({ it.modifier.isStatic }),
+                Constrain({ !it.isConstant && it.modifier.isStatic }),
                 "Do not write static properties",
                 holder
         )
