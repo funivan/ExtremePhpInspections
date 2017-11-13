@@ -4,6 +4,7 @@ import com.funivan.php.extremePhpInspections.constrains.ConstrainInterface
 import com.funivan.php.extremePhpInspections.constrains.Not
 import com.funivan.php.extremePhpInspections.constrains.method.aliases.InRegularClass
 import com.funivan.php.extremePhpInspections.constrains.method.aliases.Internal
+import com.funivan.php.extremePhpInspections.constrains.method.aliases.NamedConstructor
 import com.funivan.php.extremePhpInspections.constrains.method.aliases.Public
 import com.funivan.php.extremePhpInspections.visitors.MethodVisitor
 import com.intellij.codeInspection.ProblemsHolder
@@ -32,7 +33,11 @@ class DeclareMethodsInTheInterfaceInspection : PhpInspection() {
 
     override fun buildVisitor(holder: ProblemsHolder, p1: Boolean): PsiElementVisitor {
         return MethodVisitor(
-                Not(Internal()) and InRegularClass() and Public() and this.notDeclaredInInterfaceConstrain,
+                Not(Internal())
+                        and InRegularClass()
+                        and Public()
+                        and Not(NamedConstructor())
+                        and this.notDeclaredInInterfaceConstrain,
                 "Method should be declared in the interface",
                 holder
         )

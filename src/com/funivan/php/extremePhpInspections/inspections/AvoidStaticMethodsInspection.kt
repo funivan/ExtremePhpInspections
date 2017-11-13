@@ -11,7 +11,7 @@ import com.jetbrains.php.lang.inspections.PhpInspection
 
 class AvoidStaticMethodsInspection : PhpInspection() {
 
-    private val constrain = Static() andNot Not(NamedConstructor(Regex("^create[.]+$")))
+    private val constrain = Static() and Not(NamedConstructor())
 
     override fun getShortName(): String {
         return "AvoidStaticMethodsInspection"
