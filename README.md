@@ -6,4 +6,4 @@
 - [x] No `public` or `protected` properties. Only `private`
 - [x] All public methods should be declared in the interface
 - [x] All public methods should be final
-- [ ] Max 10 methods per interface
+- [x] Max 10 methods per interface

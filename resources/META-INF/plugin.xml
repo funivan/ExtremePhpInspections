@@ -45,6 +45,14 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
+            groupName="General"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidHugeInterfacesInspection"
+            enabledByDefault="true"
+            displayName="Avoid huge interfaces"
+            shortName="AvoidHugeInterfacesInspection"
+        />
+        <localInspection
+            groupPath="PHP,ExtremePhpInspection"
             groupName="Static"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidStaticPropertiesInspection"
             enabledByDefault="true"
