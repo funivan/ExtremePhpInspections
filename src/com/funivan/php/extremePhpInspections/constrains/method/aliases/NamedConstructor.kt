@@ -17,14 +17,22 @@ class NamedConstructor : ConstrainInterface<Method> {
                 val containingClass = target.containingClass
                 if (containingClass is PhpClass) {
                     val returnTypeFQN = returnType.fqn
-                    result = (
-                            returnType.fqn.equals(containingClass.fqn)
-                                    || containingClass.implementedInterfaces.any { it.fqn == returnTypeFQN }
-                            )
+                    result = recursiveInheritList(containingClass).any { it == returnTypeFQN }
                 }
             }
         }
         return result
     }
 
+    private fun recursiveInheritList(targetClass: PhpClass): Set<String> {
+        val result = mutableSetOf(targetClass.fqn)
+        for (referenceElement in targetClass.implementedInterfaces) {
+            result.addAll(recursiveInheritList(referenceElement))
+        }
+        val parent = targetClass.superClass
+        if (parent != null) {
+            result.addAll(recursiveInheritList(parent))
+        }
+        return result
+    }
 }
