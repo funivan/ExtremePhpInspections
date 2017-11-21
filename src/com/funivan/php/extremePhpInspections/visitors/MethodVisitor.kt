@@ -6,9 +6,9 @@ import com.jetbrains.php.lang.psi.elements.Method
 import com.jetbrains.php.lang.psi.visitors.PhpElementVisitor
 
 class MethodVisitor(
-        private val constraint: ConstrainInterface<Method>,
-        private val message: String,
-        private val holder: ProblemsHolder
+    private val constraint: ConstrainInterface<Method>,
+    private val message: String,
+    private val holder: ProblemsHolder
 ) : PhpElementVisitor() {
     override fun visitPhpMethod(method: Method) {
         super.visitPhpMethod(method)

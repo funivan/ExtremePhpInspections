@@ -19,9 +19,9 @@ class AvoidStaticMethodsInspection : PhpInspection() {
 
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return MethodVisitor(
-                constrain,
-                "Do not write static methods",
-                holder
+            constrain,
+            "Do not write static methods",
+            holder
         )
     }
 }

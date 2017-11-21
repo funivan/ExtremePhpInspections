@@ -14,9 +14,9 @@ class AvoidPublicOrProtectedPropertiesInspection : PhpInspection() {
 
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return FieldVisitor(
-                Constrain({ !it.isConstant && !it.modifier.isPrivate }),
-                "Property should be private",
-                holder
+            Constrain({ !it.isConstant && !it.modifier.isPrivate }),
+            "Property should be private",
+            holder
         )
     }
 }

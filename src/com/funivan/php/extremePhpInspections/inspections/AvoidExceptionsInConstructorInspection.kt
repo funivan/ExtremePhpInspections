@@ -18,16 +18,15 @@ class AvoidExceptionsInConstructorInspection : PhpInspection() {
 
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return MethodVisitor(
-                AllOf(
-                        OneOf(
-                                Name(Regex("^__construct$")),
-                                NamedConstructor()
-                        ),
-                        WithChildElement { it is PhpThrow }
+            AllOf(
+                OneOf(
+                    Name(Regex("^__construct$")),
+                    NamedConstructor()
                 ),
-
-                "Do not throw exceptions while initializing object",
-                holder
+                WithChildElement { it is PhpThrow }
+            ),
+            "Do not throw exceptions while initializing object",
+            holder
         )
     }
 }

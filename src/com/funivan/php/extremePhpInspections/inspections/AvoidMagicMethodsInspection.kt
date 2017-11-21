@@ -15,9 +15,9 @@ class AvoidMagicMethodsInspection : PhpInspection() {
 
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return MethodVisitor(
-                Name(Regex("^__toString$")),
-                "Avoid __toString",
-                holder
+            Name(Regex("^__toString$")),
+            "Avoid __toString",
+            holder
         )
     }
 

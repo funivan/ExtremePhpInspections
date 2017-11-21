@@ -15,9 +15,9 @@ class AvoidProtectedMethodsInspection : PhpInspection() {
 
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return MethodVisitor(
-                Constrain({ it.modifier.isProtected }),
-                "Do not write protected methods. Only public or private",
-                holder
+            Constrain({ it.modifier.isProtected }),
+            "Do not write protected methods. Only public or private",
+            holder
         )
     }
 }

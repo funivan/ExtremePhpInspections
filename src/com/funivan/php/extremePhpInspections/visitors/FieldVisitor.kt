@@ -6,9 +6,9 @@ import com.jetbrains.php.lang.psi.elements.Field
 import com.jetbrains.php.lang.psi.visitors.PhpElementVisitor
 
 class FieldVisitor(
-        private val constraint: ConstrainInterface<Field>,
-        private val message: String,
-        private val holder: ProblemsHolder
+    private val constraint: ConstrainInterface<Field>,
+    private val message: String,
+    private val holder: ProblemsHolder
 ) : PhpElementVisitor() {
     override fun visitPhpField(field: Field) {
         super.visitPhpField(field)
