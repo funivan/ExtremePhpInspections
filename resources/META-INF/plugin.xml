@@ -53,6 +53,14 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
+            groupName="General"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidExceptionsInConstructorInspection"
+            enabledByDefault="true"
+            displayName="Avoid exceptions in the constructor"
+            shortName="AvoidExceptionsInConstructorInspection"
+        />
+        <localInspection
+            groupPath="PHP,ExtremePhpInspection"
             groupName="Static"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidStaticPropertiesInspection"
             enabledByDefault="true"
