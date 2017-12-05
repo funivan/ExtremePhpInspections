@@ -99,6 +99,14 @@
             displayName="Avoid magic methods"
             shortName="AvoidMagicMethodsInspection"
         />
+        <localInspection
+            groupPath="PHP,ExtremePhpInspection"
+            groupName="General"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.NonStrictReturnTypeInspection"
+            enabledByDefault="true"
+            displayName="Non strict return type"
+            shortName="ReturnTypeInspection"
+        />
     </extensions>
 
     <actions>
