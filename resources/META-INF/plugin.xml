@@ -78,10 +78,10 @@
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
             groupName="Visibility"
-            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidPublicOrProtectedPropertiesInspection"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.PropertyVisibilityInspection"
             enabledByDefault="true"
-            displayName="Avoid protected or public properties"
-            shortName="AvoidPublicOrProtectedPropertiesInspection"
+            displayName="Property visibility"
+            shortName="PropertyVisibilityInspection"
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
@@ -103,9 +103,9 @@
             groupPath="PHP,ExtremePhpInspection"
             groupName="General"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.NonStrictReturnTypeInspection"
-            enabledByDefault="true"
+            enabledByDefault="false"
             displayName="Non strict return type"
-            shortName="ReturnTypeInspection"
+            shortName="NonStrictReturnTypeInspection"
         />
     </extensions>
 

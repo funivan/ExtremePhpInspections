@@ -10,7 +10,6 @@ import com.funivan.php.extremePhpInspections.visitors.MethodVisitor
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.PsiElementVisitor
 import com.jetbrains.php.lang.inspections.PhpInspection
-import com.jetbrains.php.lang.psi.elements.Method
 
 
 class PublicMethodsShouldBeFinalInspection : PhpInspection() {
@@ -21,14 +20,14 @@ class PublicMethodsShouldBeFinalInspection : PhpInspection() {
 
     override fun buildVisitor(holder: ProblemsHolder, p1: Boolean): PsiElementVisitor {
         return MethodVisitor(
-            AllOf(
-                Not(Internal()),
-                InRegularClass(),
-                Constrain<Method>({ it.modifier.isPublic && !it.isFinal }),
-                Not(NamedConstructor())
-            ),
-            "Method should be final",
-            holder
+                AllOf(
+                        Not(Internal()),
+                        InRegularClass(),
+                        Constrain({ it.modifier.isPublic && !it.isFinal }),
+                        Not(NamedConstructor())
+                ),
+                "Method should be final",
+                holder
         )
     }
 

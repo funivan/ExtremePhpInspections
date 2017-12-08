@@ -6,10 +6,10 @@ import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.PsiElementVisitor
 import com.jetbrains.php.lang.inspections.PhpInspection
 
-class AvoidPublicOrProtectedPropertiesInspection : PhpInspection() {
+class PropertyVisibilityInspection : PhpInspection() {
 
     override fun getShortName(): String {
-        return "AvoidPublicOrProtectedPropertiesInspection"
+        return "PropertyVisibilityInspection"
     }
 
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
