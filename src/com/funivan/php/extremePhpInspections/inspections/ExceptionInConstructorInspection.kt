@@ -12,9 +12,9 @@ import com.jetbrains.php.lang.inspections.PhpInspection
 import com.jetbrains.php.lang.psi.elements.PhpThrow
 
 
-class AvoidExceptionsInConstructorInspection : PhpInspection() {
+class ExceptionInConstructorInspection : PhpInspection() {
 
-    override fun getShortName() = "AvoidExceptionsInConstructorInspection"
+    override fun getShortName() = "ExceptionInConstructorInspection"
 
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return MethodVisitor(

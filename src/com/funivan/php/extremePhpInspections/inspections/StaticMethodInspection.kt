@@ -1,23 +1,29 @@
 package com.funivan.php.extremePhpInspections.inspections
 
-import com.funivan.php.extremePhpInspections.constrains.Constrain
+import com.funivan.php.extremePhpInspections.constrains.Not
+import com.funivan.php.extremePhpInspections.constrains.method.Static
+import com.funivan.php.extremePhpInspections.constrains.method.aliases.NamedConstructor
 import com.funivan.php.extremePhpInspections.visitors.MethodVisitor
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.PsiElementVisitor
 import com.jetbrains.php.lang.inspections.PhpInspection
 
 
-class AvoidProtectedMethodsInspection : PhpInspection() {
+class StaticMethodInspection : PhpInspection() {
+
+    private val constrain = Static() and Not(NamedConstructor())
 
     override fun getShortName(): String {
-        return "AvoidProtectedMethodsInspection"
+        return "StaticMethodInspection"
     }
 
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return MethodVisitor(
-            Constrain({ it.modifier.isProtected }),
-            "Do not write protected methods. Only public or private",
+            constrain,
+            "Do not write static methods",
             holder
         )
     }
 }
+
+

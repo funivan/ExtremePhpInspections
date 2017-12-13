@@ -14,7 +14,7 @@ import com.jetbrains.php.lang.inspections.PhpInspection
 import com.jetbrains.php.lang.psi.elements.Method
 
 
-class DeclareMethodsInTheInterfaceInspection : PhpInspection() {
+class MethodDeclarationInspection : PhpInspection() {
     private val notDeclaredInInterfaceConstrain = object : ConstrainInterface<Method> {
         override fun match(target: Method): Boolean {
             var match = false
@@ -29,7 +29,7 @@ class DeclareMethodsInTheInterfaceInspection : PhpInspection() {
     }
 
     override fun getShortName(): String {
-        return "DeclareMethodsInTheInterfaceInspection"
+        return "MethodDeclarationInspection"
     }
 
     override fun buildVisitor(holder: ProblemsHolder, p1: Boolean): PsiElementVisitor {

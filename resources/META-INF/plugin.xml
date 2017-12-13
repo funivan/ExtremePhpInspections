@@ -30,7 +30,7 @@
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
             groupName="Static"
-            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidStaticMethodsInspection"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.StaticMethodInspection"
             enabledByDefault="true"
             displayName="Avoid Static methods"
             shortName="AvoidStaticMethodsInspection"
@@ -38,7 +38,7 @@
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
             groupName="General"
-            implementationClass="com.funivan.php.extremePhpInspections.inspections.DeclareMethodsInTheInterfaceInspection"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.MethodDeclarationInspection"
             enabledByDefault="true"
             displayName="Public methods should be declared in the interface"
             shortName="DeclareMethodsInTheInterfaceInspection"
@@ -46,7 +46,7 @@
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
             groupName="General"
-            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidHugeInterfacesInspection"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.TooManyMethodsInspection"
             enabledByDefault="true"
             displayName="Avoid huge interfaces"
             shortName="AvoidHugeInterfacesInspection"
@@ -54,15 +54,15 @@
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
             groupName="General"
-            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidExceptionsInConstructorInspection"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.ExceptionInConstructorInspection"
             enabledByDefault="true"
             displayName="Avoid exceptions in the constructor"
-            shortName="AvoidExceptionsInConstructorInspection"
+            shortName="ExceptionInConstructorInspection"
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
             groupName="Static"
-            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidStaticPropertiesInspection"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.StaticPropertyInspection"
             enabledByDefault="true"
             displayName="Avoid static properties"
             shortName="AvoidStaticPropertiesInspection"
@@ -70,7 +70,7 @@
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
             groupName="Visibility"
-            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidProtectedMethodsInspection"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.MethodVisibilityInspection"
             enabledByDefault="true"
             displayName="Avoid protected methods"
             shortName="AvoidProtectedMethodsInspection"
@@ -86,7 +86,7 @@
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
             groupName="Visibility"
-            implementationClass="com.funivan.php.extremePhpInspections.inspections.PublicMethodsShouldBeFinalInspection"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.MethodFinalModifierInspection"
             enabledByDefault="true"
             displayName="Public methods should be final"
             shortName="PublicMethodsShouldBeFinalInspection"
@@ -94,7 +94,7 @@
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
             groupName="Magic"
-            implementationClass="com.funivan.php.extremePhpInspections.inspections.AvoidMagicMethodsInspection"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.MagicMethodInspection"
             enabledByDefault="true"
             displayName="Avoid magic methods"
             shortName="AvoidMagicMethodsInspection"

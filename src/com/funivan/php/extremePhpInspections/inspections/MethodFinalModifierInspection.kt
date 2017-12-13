@@ -12,10 +12,10 @@ import com.intellij.psi.PsiElementVisitor
 import com.jetbrains.php.lang.inspections.PhpInspection
 
 
-class PublicMethodsShouldBeFinalInspection : PhpInspection() {
+class MethodFinalModifierInspection : PhpInspection() {
 
     override fun getShortName(): String {
-        return "PublicMethodsShouldBeFinalInspection"
+        return "MethodFinalModifierInspection"
     }
 
     override fun buildVisitor(holder: ProblemsHolder, p1: Boolean): PsiElementVisitor {

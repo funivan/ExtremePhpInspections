@@ -7,9 +7,9 @@ import com.intellij.psi.PsiElementVisitor
 import com.jetbrains.php.lang.inspections.PhpInspection
 
 
-class AvoidMagicMethodsInspection : PhpInspection() {
+class MagicMethodInspection : PhpInspection() {
     override fun getShortName(): String {
-        return "AvoidMagicMethodsInspection"
+        return "MagicMethodInspection"
     }
 
 
