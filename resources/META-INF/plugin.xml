@@ -41,7 +41,7 @@
             implementationClass="com.funivan.php.extremePhpInspections.inspections.MethodDeclarationInspection"
             enabledByDefault="true"
             displayName="Public methods should be declared in the interface"
-            shortName="DeclareMethodsInTheInterfaceInspection"
+            shortName="MethodDeclarationInspection"
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
@@ -49,7 +49,7 @@
             implementationClass="com.funivan.php.extremePhpInspections.inspections.TooManyMethodsInspection"
             enabledByDefault="true"
             displayName="Avoid huge interfaces"
-            shortName="AvoidHugeInterfacesInspection"
+            shortName="TooManyMethodsInspection"
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"

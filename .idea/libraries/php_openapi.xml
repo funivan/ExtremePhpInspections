@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="php-openapi">
+    <CLASSES>
+      <root url="file://$USER_HOME$/programs/idea-u/lib" />
+      <root url="file://$USER_HOME$/programs/phpstorm/plugins/php/lib" />
+      <root url="jar://$USER_HOME$/programs/idea-u/plugins/CSS/lib/css-openapi.jar!/" />
+      <root url="jar://$USER_HOME$/programs/idea-u/plugins/CSS/lib/css.jar!/" />
+      <root url="jar://$USER_HOME$/programs/phpstorm/lib/phpstorm.jar!/" />
+      <root url="jar://$USER_HOME$/programs/idea-u/plugins/properties/lib/properties.jar!/" />
+      <root url="jar://$USER_HOME$/programs/idea-u/plugins/CSS/lib/resources_en.jar!/" />
+      <root url="jar://$USER_HOME$/programs/idea-u/plugins/properties/lib/resources_en.jar!/" />
+      <root url="jar://$USER_HOME$/programs/idea-u/plugins/java-i18n/lib/java-i18n.jar!/" />
+      <root url="jar://$USER_HOME$/programs/idea-u/lib/kotlin-stdlib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/programs/idea-u/lib" />
+      <root url="file://$USER_HOME$/programs/phpstorm/plugins/php/lib" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/programs/idea-u/lib" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/programs/phpstorm/plugins/php/lib" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/programs/idea-u/lib" recursive="false" type="SOURCES" />
+    <jarDirectory url="file://$USER_HOME$/programs/phpstorm/plugins/php/lib" recursive="false" type="SOURCES" />
+  </library>
+</component>

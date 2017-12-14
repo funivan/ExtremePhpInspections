@@ -7,7 +7,7 @@ internal class DeclareMethodsInTheInterfaceInspectionTest : CodeInsightFixtureTe
 
     fun `test named constructor should not be skipped in the interface declaration`() {
         myFixture.enableInspections(MethodDeclarationInspection())
-        myFixture.configureByFile("fixtures/MethodDeclarationInspection/skip.php")
+        myFixture.configureByFile("fixtures/DeclareMethodsInTheInterfaceInspectionTest/a1.php")
         myFixture.testHighlighting(true, false, true)
     }
 }
