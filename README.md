@@ -7,4 +7,4 @@
 - [x] All public methods should be declared in the interface
 - [x] All public methods should be final
 - [x] Max 10 methods per interface
-- [ ] No exceptions in the constructor
+- [x] No exceptions in the constructor
