@@ -55,7 +55,7 @@
             groupPath="PHP,ExtremePhpInspection"
             groupName="General"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.ExceptionInConstructorInspection"
-            enabledByDefault="true"
+            enabledByDefault="false"
             displayName="Avoid exceptions in the constructor"
             shortName="ExceptionInConstructorInspection"
         />
