@@ -8,3 +8,4 @@
 - [x] All public methods should be final
 - [x] Max 10 methods per interface
 - [x] No exceptions in the constructor
+- [x] All parameters should be declared with types
