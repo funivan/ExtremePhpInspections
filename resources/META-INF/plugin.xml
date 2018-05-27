@@ -117,6 +117,15 @@
             displayName="Non strict return type"
             shortName="NonStrictReturnTypeInspection"
         />
+        <localInspection
+            groupPath="PHP,ExtremePhpInspection"
+            level="WEAK WARNING"
+            groupName="General"
+            implementationClass="com.funivan.php.extremePhpInspections.inspections.MissingParameterTypeDeclarationInspection"
+            enabledByDefault="true"
+            displayName="Missing parameter type declaration"
+            shortName="MissingParameterTypeDeclarationInspection"
+        />
     </extensions>
 
     <actions>
