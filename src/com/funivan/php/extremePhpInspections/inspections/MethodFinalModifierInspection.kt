@@ -12,6 +12,9 @@ import com.intellij.psi.PsiElementVisitor
 import com.jetbrains.php.lang.inspections.PhpInspection
 
 
+/**
+ * @todo check if class if final
+ */
 class MethodFinalModifierInspection : PhpInspection() {
 
     override fun getShortName(): String {

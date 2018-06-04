@@ -12,21 +12,24 @@ import com.jetbrains.php.lang.inspections.PhpInspection
 import com.jetbrains.php.lang.psi.elements.PhpThrow
 
 
+/**
+ * Experimental function. Under development
+ */
 class ExceptionInConstructorInspection : PhpInspection() {
 
     override fun getShortName() = "ExceptionInConstructorInspection"
 
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return MethodVisitor(
-            AllOf(
-                OneOf(
-                    Name(Regex("^__construct$")),
-                    NamedConstructor()
+                AllOf(
+                        OneOf(
+                                Name(Regex("^__construct$")),
+                                NamedConstructor()
+                        ),
+                        WithChildElement { it is PhpThrow }
                 ),
-                WithChildElement { it is PhpThrow }
-            ),
-            "Do not throw exceptions while initializing object",
-            holder
+                "Do not throw exceptions while initializing object",
+                holder
         )
     }
 }

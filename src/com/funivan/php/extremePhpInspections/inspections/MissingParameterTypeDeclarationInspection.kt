@@ -8,6 +8,7 @@ import com.jetbrains.php.lang.inspections.PhpInspection
 
 
 class MissingParameterTypeDeclarationInspection : PhpInspection() {
+
     override fun getShortName(): String {
         return "MissingParameterTypeDeclarationInspection"
     }

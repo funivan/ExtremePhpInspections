@@ -1,5 +1,6 @@
 package com.funivan.php.extremePhpInspections.inspections
 
+import com.funivan.php.extremePhpInspections.constrains.OneOf
 import com.funivan.php.extremePhpInspections.constrains.method.Name
 import com.funivan.php.extremePhpInspections.visitors.MethodVisitor
 import com.intellij.codeInspection.ProblemsHolder
@@ -15,9 +16,12 @@ class MagicMethodInspection : PhpInspection() {
 
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return MethodVisitor(
-            Name(Regex("^__toString$")),
-            "Avoid __toString",
-            holder
+                OneOf(
+                        Name(Regex("^__toString$")),
+                        Name(Regex("^count"))
+                ),
+                "Avoid magic methods.",
+                holder
         )
     }
 
