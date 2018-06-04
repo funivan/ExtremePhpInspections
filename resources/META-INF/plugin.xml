@@ -34,7 +34,7 @@
             implementationClass="com.funivan.php.extremePhpInspections.inspections.StaticMethodInspection"
             enabledByDefault="true"
             displayName="Avoid Static methods"
-            shortName="AvoidStaticMethodsInspection"
+            shortName="StaticMethodInspection"
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
