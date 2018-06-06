@@ -29,7 +29,7 @@
         <!-- Add your extensions here -->
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
-            level="WEAK WARNING"
+            level="TYPO"
             groupName="Static"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.StaticMethodInspection"
             enabledByDefault="true"
@@ -38,7 +38,7 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
-            level="WEAK WARNING"
+            level="TYPO"
             groupName="General"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.MethodDeclarationInspection"
             enabledByDefault="true"
@@ -47,7 +47,7 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
-            level="WEAK WARNING"
+            level="TYPO"
             groupName="General"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.TooManyMethodsInspection"
             enabledByDefault="true"
@@ -56,7 +56,7 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
-            level="WEAK WARNING"
+            level="TYPO"
             groupName="General"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.ExceptionInConstructorInspection"
             enabledByDefault="false"
@@ -65,7 +65,7 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
-            level="WEAK WARNING"
+            level="TYPO"
             groupName="Static"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.StaticPropertyInspection"
             enabledByDefault="true"
@@ -74,7 +74,7 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
-            level="WEAK WARNING"
+            level="TYPO"
             groupName="Visibility"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.MethodVisibilityInspection"
             enabledByDefault="true"
@@ -83,7 +83,7 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
-            level="WEAK WARNING"
+            level="TYPO"
             groupName="Visibility"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.PropertyVisibilityInspection"
             enabledByDefault="true"
@@ -92,7 +92,7 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
-            level="WEAK WARNING"
+            level="TYPO"
             groupName="Visibility"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.MethodFinalModifierInspection"
             enabledByDefault="true"
@@ -101,7 +101,7 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
-            level="WEAK WARNING"
+            level="TYPO"
             groupName="Magic"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.MagicMethodInspection"
             enabledByDefault="true"
@@ -110,7 +110,7 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
-            level="WEAK WARNING"
+            level="TYPO"
             groupName="General"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.NonStrictReturnTypeInspection"
             enabledByDefault="false"
@@ -119,7 +119,7 @@
         />
         <localInspection
             groupPath="PHP,ExtremePhpInspection"
-            level="WEAK WARNING"
+            level="TYPO"
             groupName="General"
             implementationClass="com.funivan.php.extremePhpInspections.inspections.MissingParameterTypeDeclarationInspection"
             enabledByDefault="true"
