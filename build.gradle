@@ -33,6 +33,3 @@ intellij {
 apply plugin: "idea"
 apply plugin: "kotlin"
 apply plugin: "org.jetbrains.intellij"
-
-group 'com.funivan.idea'
-version '1.0-SNAPSHOT'
