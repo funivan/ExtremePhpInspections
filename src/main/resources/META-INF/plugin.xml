@@ -1,0 +1,124 @@
+<idea-plugin>
+    <id>com.funivan.extreme-php-inspections</id>
+    <name>ExtremePhpInspections</name>
+    <version>1.0</version>
+    <vendor email="alotofall@gmail.com" url="http://funivan.com">Funivan</vendor>
+
+    <description><![CDATA[
+      Make your code more strict and flexible
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.jetbrains.php</depends>
+    <depends>com.intellij.modules.platform</depends>
+
+    <idea-version since-build="145.0"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <localInspection
+                groupPath="PHP,ExtremePhpInspection"
+                level="TYPO"
+                groupName="Static"
+                implementationClass="com.funivan.idea.php.extremePhpInspections.inspections.StaticMethodInspection"
+                enabledByDefault="true"
+                displayName="Avoid Static methods"
+                shortName="StaticMethodInspection"
+        />
+        <localInspection
+                groupPath="PHP,ExtremePhpInspection"
+                level="TYPO"
+                groupName="General"
+                implementationClass="com.funivan.idea.php.extremePhpInspections.inspections.MethodDeclarationInspection"
+                enabledByDefault="true"
+                displayName="Public methods should be declared in the interface"
+                shortName="MethodDeclarationInspection"
+        />
+        <localInspection
+                groupPath="PHP,ExtremePhpInspection"
+                level="TYPO"
+                groupName="General"
+                implementationClass="com.funivan.idea.php.extremePhpInspections.inspections.TooManyMethodsInspection"
+                enabledByDefault="true"
+                displayName="Avoid huge interfaces"
+                shortName="TooManyMethodsInspection"
+        />
+        <localInspection
+                groupPath="PHP,ExtremePhpInspection"
+                level="TYPO"
+                groupName="General"
+                implementationClass="com.funivan.idea.php.extremePhpInspections.inspections.ExceptionInConstructorInspection"
+                enabledByDefault="false"
+                displayName="Avoid exceptions in the constructor"
+                shortName="ExceptionInConstructorInspection"
+        />
+        <localInspection
+                groupPath="PHP,ExtremePhpInspection"
+                level="TYPO"
+                groupName="Static"
+                implementationClass="com.funivan.idea.php.extremePhpInspections.inspections.StaticPropertyInspection"
+                enabledByDefault="true"
+                displayName="Avoid static properties"
+                shortName="StaticPropertyInspection"
+        />
+        <localInspection
+                groupPath="PHP,ExtremePhpInspection"
+                level="TYPO"
+                groupName="Visibility"
+                implementationClass="com.funivan.idea.php.extremePhpInspections.inspections.MethodVisibilityInspection"
+                enabledByDefault="true"
+                displayName="Avoid protected methods"
+                shortName="MethodVisibilityInspection"
+        />
+        <localInspection
+                groupPath="PHP,ExtremePhpInspection"
+                level="TYPO"
+                groupName="Visibility"
+                implementationClass="com.funivan.idea.php.extremePhpInspections.inspections.PropertyVisibilityInspection"
+                enabledByDefault="true"
+                displayName="Property visibility"
+                shortName="PropertyVisibilityInspection"
+        />
+        <localInspection
+                groupPath="PHP,ExtremePhpInspection"
+                level="TYPO"
+                groupName="Visibility"
+                implementationClass="com.funivan.idea.php.extremePhpInspections.inspections.MethodFinalModifierInspection"
+                enabledByDefault="true"
+                displayName="Public methods should be final"
+                shortName="MethodFinalModifierInspection"
+        />
+        <localInspection
+                groupPath="PHP,ExtremePhpInspection"
+                level="TYPO"
+                groupName="Magic"
+                implementationClass="com.funivan.idea.php.extremePhpInspections.inspections.MagicMethodInspection"
+                enabledByDefault="true"
+                displayName="Avoid magic methods"
+                shortName="MagicMethodInspection"
+        />
+        <localInspection
+                groupPath="PHP,ExtremePhpInspection"
+                level="TYPO"
+                groupName="General"
+                implementationClass="com.funivan.idea.php.extremePhpInspections.inspections.NonStrictReturnTypeInspection"
+                enabledByDefault="false"
+                displayName="Non strict return type"
+                shortName="NonStrictReturnTypeInspection"
+        />
+        <localInspection
+                groupPath="PHP,ExtremePhpInspection"
+                level="TYPO"
+                groupName="General"
+                implementationClass="com.funivan.idea.php.extremePhpInspections.inspections.MissingParameterTypeDeclarationInspection"
+                enabledByDefault="true"
+                displayName="Missing parameter type declaration"
+                shortName="MissingParameterTypeDeclarationInspection"
+        />
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
