@@ -20,7 +20,7 @@ compileTestKotlin {
 }
 intellij {
     version ideaVersion
-    sandboxDirectory project.rootDir.canonicalPath + "/sandbox"
+    sandboxDirectory project.rootDir.canonicalPath + "/build/idea-sandbox"
     downloadSources Boolean.valueOf(downloadIdeaSources)
     updateSinceUntilBuild = false
     plugins = [
