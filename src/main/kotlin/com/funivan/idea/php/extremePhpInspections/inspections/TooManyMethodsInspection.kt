@@ -14,7 +14,7 @@ class TooManyMethodsInspection : PhpInspection() {
 
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return ClassVisitor(
-                com.funivan.idea.php.extremePhpInspections.constrains.Constrain({ it.isInterface && it.ownMethods.size > 10 }),
+                Constrain({ it.isInterface && it.ownMethods.size > 10 }),
                 "Interface contains more than 10 methods",
                 holder
         )

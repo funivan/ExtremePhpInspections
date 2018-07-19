@@ -1,4 +1,4 @@
-package com.funivan.idea.php.extremePhpInspections.inspections
+package com.funivan.idea.php.extremePhpInspections.inspections.staticProperty
 
 import com.funivan.idea.php.extremePhpInspections.constrains.Constrain
 import com.funivan.idea.php.extremePhpInspections.visitors.FieldVisitor

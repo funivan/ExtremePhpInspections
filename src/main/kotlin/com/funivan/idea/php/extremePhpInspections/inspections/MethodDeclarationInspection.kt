@@ -1,12 +1,5 @@
 package com.funivan.idea.php.extremePhpInspections.inspections
 
-import com.funivan.idea.php.extremePhpInspections.constrains.AllOf
-import com.funivan.idea.php.extremePhpInspections.constrains.ConstrainInterface
-import com.funivan.idea.php.extremePhpInspections.constrains.Not
-import com.funivan.idea.php.extremePhpInspections.constrains.method.aliases.InRegularClass
-import com.funivan.idea.php.extremePhpInspections.constrains.method.aliases.Internal
-import com.funivan.idea.php.extremePhpInspections.constrains.method.aliases.NamedConstructor
-import com.funivan.idea.php.extremePhpInspections.constrains.method.aliases.Public
 import com.funivan.idea.php.extremePhpInspections.visitors.MethodVisitor
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.PsiElementVisitor

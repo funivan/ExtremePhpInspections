@@ -1,6 +1,5 @@
 package com.funivan.idea.php.extremePhpInspections.inspections
 
-import com.funivan.idea.php.extremePhpInspections.constrains.Constrain
 import com.funivan.idea.php.extremePhpInspections.visitors.MethodVisitor
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.PsiElementVisitor

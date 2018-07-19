@@ -1,22 +1,21 @@
 package com.funivan.idea.php.extremePhpInspections.constrains.method.aliases
 
-import com.funivan.idea.php.extremePhpInspections.constrains.ConstrainInterface
 import com.funivan.idea.php.extremePhpInspections.constrains.method.Name
-import com.jetbrains.php.lang.psi.elements.ClassReference
 import com.jetbrains.php.lang.psi.elements.Method
 import com.jetbrains.php.lang.psi.elements.PhpClass
 
 
 class NamedConstructor : com.funivan.idea.php.extremePhpInspections.constrains.ConstrainInterface<Method> {
-    private val constrains = com.funivan.idea.php.extremePhpInspections.constrains.method.Name(Regex("^create.*$"))
+    private val constrains = Name(Regex("^create.*$"))
     override fun match(target: Method): Boolean {
         var result = false
         if (constrains.match(target)) {
-            val returnType = target.returnType
-            if (returnType is ClassReference) {
-                val containingClass = target.containingClass
-                if (containingClass is PhpClass) {
-                    val returnTypeFQN = returnType.fqn
+            val containingClass = target.containingClass
+            if (containingClass is PhpClass) {
+                val returnType = target.returnType
+                if (returnType != null) {
+                    // @todo filter primitive (\int|\array|\...) types
+                    val returnTypeFQN = returnType.classReference.fqn
                     result = recursiveInheritList(containingClass).any { it == returnTypeFQN }
                 }
             }
