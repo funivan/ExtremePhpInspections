@@ -1,26 +1,20 @@
 package com.funivan.idea.php.extremePhpInspections.inspections.magicMethod
 
-import com.intellij.psi.PsiDocumentManager
-import com.intellij.testFramework.fixtures.LightCodeInsightFixtureTestCase
-import com.jetbrains.php.lang.PhpFileType
+import com.funivan.idea.php.extremePhpInspections.inspections.PhpInspectionsTestCase
 
-internal class MagicMethodInspectionTest : LightCodeInsightFixtureTestCase() {
+internal class MagicMethodInspectionTest : PhpInspectionsTestCase() {
 
 
     fun `test positive`() {
-        val code =
+        assert(
+                MagicMethodInspection(),
                 """
 <?php
 class A {
  public function <weak_warning descr="Avoid magic methods.">__toString</weak_warning>(){}
 }
 ?>
-
                 """
-        myFixture.configureByText(PhpFileType.INSTANCE, code)
-        PsiDocumentManager.getInstance(project).commitAllDocuments()
-
-        myFixture.enableInspections(MagicMethodInspection())
-        myFixture.testHighlighting(true, false, true)
+        )
     }
 }

@@ -1,9 +1,9 @@
 package com.funivan.idea.php.extremePhpInspections.inspections.exceptionInConstructor
 
-import com.funivan.idea.php.extremePhpInspections.inspections.InspectionsTestCase
+import com.funivan.idea.php.extremePhpInspections.inspections.PhpInspectionsTestCase
 
 
-internal class ExceptionInConstructorInspectionTest : InspectionsTestCase() {
+internal class ExceptionInConstructorInspectionTest : PhpInspectionsTestCase() {
 
     fun `test positive`() {
         assert(

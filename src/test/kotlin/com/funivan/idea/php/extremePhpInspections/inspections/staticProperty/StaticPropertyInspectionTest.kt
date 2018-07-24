@@ -1,15 +1,14 @@
 package com.funivan.idea.php.extremePhpInspections.inspections.staticProperty
 
-import com.intellij.psi.PsiDocumentManager
-import com.intellij.testFramework.fixtures.LightCodeInsightFixtureTestCase
-import com.jetbrains.php.lang.PhpFileType
+import com.funivan.idea.php.extremePhpInspections.inspections.PhpInspectionsTestCase
 
 
-internal class StaticPropertyInspectionTest : LightCodeInsightFixtureTestCase() {
+internal class StaticPropertyInspectionTest : PhpInspectionsTestCase() {
 
 
     fun `test fire error on static properties`() {
-        val code =
+        assert(
+                StaticPropertyInspection(),
                 """
 <?php
 class A {
@@ -17,10 +16,6 @@ class A {
 }
 ?>
                 """
-        myFixture.configureByText(PhpFileType.INSTANCE, code)
-        PsiDocumentManager.getInstance(project).commitAllDocuments()
-
-        myFixture.enableInspections(StaticPropertyInspection())
-        myFixture.testHighlighting(true, false, true)
+        )
     }
 }

@@ -6,7 +6,7 @@ import com.jetbrains.php.lang.PhpFileType
 import com.jetbrains.php.lang.inspections.PhpInspection
 
 
-abstract class InspectionsTestCase : LightCodeInsightFixtureTestCase() {
+abstract class PhpInspectionsTestCase : LightCodeInsightFixtureTestCase() {
     fun assert(inspection: PhpInspection, code: String) {
         myFixture.configureByText(PhpFileType.INSTANCE, code)
         PsiDocumentManager.getInstance(project).commitAllDocuments()
