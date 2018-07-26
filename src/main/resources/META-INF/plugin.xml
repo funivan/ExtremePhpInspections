@@ -30,7 +30,7 @@
                 groupPath="PHP"
                 level="WEAK WARNING"
                 groupName="ExtremePhpInspection"
-                implementationClass="com.funivan.idea.php.extremePhpInspections.inspections.MethodDeclarationInspection"
+                implementationClass="com.funivan.idea.php.extremePhpInspections.inspections.methodDeclaration.MethodDeclarationInspection"
                 enabledByDefault="true"
                 displayName="Public methods should be declared in the interface"
                 shortName="MethodDeclarationInspection"

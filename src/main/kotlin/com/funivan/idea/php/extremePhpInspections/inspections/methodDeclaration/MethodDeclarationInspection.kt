@@ -1,5 +1,11 @@
-package com.funivan.idea.php.extremePhpInspections.inspections
+package com.funivan.idea.php.extremePhpInspections.inspections.methodDeclaration
 
+import com.funivan.idea.php.extremePhpInspections.constrains.AllOf
+import com.funivan.idea.php.extremePhpInspections.constrains.Not
+import com.funivan.idea.php.extremePhpInspections.constrains.method.aliases.InRegularClass
+import com.funivan.idea.php.extremePhpInspections.constrains.method.aliases.Internal
+import com.funivan.idea.php.extremePhpInspections.constrains.method.aliases.NamedConstructor
+import com.funivan.idea.php.extremePhpInspections.constrains.method.aliases.Public
 import com.funivan.idea.php.extremePhpInspections.visitors.MethodVisitor
 import com.intellij.codeInspection.ProblemsHolder
 import com.intellij.psi.PsiElementVisitor
@@ -26,11 +32,11 @@ class MethodDeclarationInspection : PhpInspection() {
 
     override fun buildVisitor(holder: ProblemsHolder, p1: Boolean): PsiElementVisitor {
         return MethodVisitor(
-                com.funivan.idea.php.extremePhpInspections.constrains.AllOf(
-                        com.funivan.idea.php.extremePhpInspections.constrains.Not(com.funivan.idea.php.extremePhpInspections.constrains.method.aliases.Internal()),
-                        com.funivan.idea.php.extremePhpInspections.constrains.method.aliases.InRegularClass(),
-                        com.funivan.idea.php.extremePhpInspections.constrains.method.aliases.Public(),
-                        com.funivan.idea.php.extremePhpInspections.constrains.Not(com.funivan.idea.php.extremePhpInspections.constrains.method.aliases.NamedConstructor()),
+                AllOf(
+                        Not(Internal()),
+                        InRegularClass(),
+                        Public(),
+                        Not(NamedConstructor()),
                         this.notDeclaredInInterfaceConstrain
                 ),
                 "Method should be declared in the interface",
